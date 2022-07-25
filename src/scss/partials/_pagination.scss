@@ -1,0 +1,123 @@
+#pagination {
+	.pagination {
+		display: flex;
+		flex-direction: row;
+		li {
+			position: relative;
+			display: inline-block;
+			transform: skew(0deg);
+			overflow: hidden;
+			z-index: 1;
+			&:not(:last-child) {
+				margin-right: 14px;
+			}
+		}
+		li:first-child, li:last-child {
+			border-radius: 7px;
+			padding: 0 16px;
+			transform: skew(-10deg);
+			box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.15);
+			transition: all .3s ease-in-out;
+			a {
+				position: relative;
+				z-index: 1;
+				transform: skew(10deg);
+			}
+			&:after,&:before {
+				position: absolute;
+				top: 50%;
+				content: '';
+				width: 20px;
+				height: 20px;
+				background-color: $color-red;
+				border-radius: 50%;
+			}
+			&:before {
+				left: -20px;
+				-webkit-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+			}
+			&:after {
+				right: -20px;
+				-webkit-transform: translate(50%, -50%);
+				transform: translate(50%, -50%);
+			}
+			&:hover {
+				box-shadow: none;
+				background-color: $color-dark;
+				transition: all .3s ease-in-out;
+				a {
+					color: #fff;
+				}
+				&:before {
+					-webkit-animation: criss-cross-left 0.8s both;
+					animation: criss-cross-left 0.8s both;
+					-webkit-animation-direction: alternate;
+					animation-direction: alternate;
+				}
+				&:after {
+					-webkit-animation: criss-cross-right 0.8s both;
+					animation: criss-cross-right 0.8s both;
+					-webkit-animation-direction: alternate;
+					animation-direction: alternate;
+				}
+			}
+		}
+		a {
+			display: inline-block;
+			font-family: $PFBeauSansPro-BbookItalic;
+			font-size: 12px;
+			color: $color-red;
+			line-height: 36px;
+			transform: skew(0deg);
+			text-decoration: none;
+			text-transform: uppercase;
+			transition: all .3s ease-in-out;
+		}
+		.dots {
+			pointer-events: none;
+		}
+		.active {
+			a {
+				color: $color-dark;
+			}
+		}
+	}
+}
+
+@media (max-width: 960px) {
+	#pagination {
+		.pagination {
+			justify-content: center;
+			li {
+				&:hover {
+					&:first-child, &:last-child {
+						background-color: #fff;
+						box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.15);
+						a {
+							color: $color-red;
+						}
+						&:after, &:before {
+							animation: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	#pagination {
+		width: 100%;
+		.pagination {
+			justify-content: space-between;
+			li {
+				display: none;
+				&:first-child,&:last-child {
+					display: inline-block;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,144 @@
+extends pug/base
+
+append vars
+	- body.classList = ['inner-page'];
+
+block content
+	// Добавьте класс inner-page в body во внутренных страницах и удалите комент //
+	.page-content
+		include pages/header
+		.navigation
+			.container
+				.navigation-title
+					h1
+						| Результаты поиска
+				<ul class="crumbs">
+					<li>
+						<a href="/">Главная</a>
+					</li>
+					<li>
+						<a href="">Результаты поиска</a>
+					</li>
+				</ul>
+		.search-result
+			.container
+				.search-result-sum
+					div
+						| Найдено:
+						span 27627 результатов
+				form(action="#" method="GET")
+					.form-group
+						input(type="search" name="search" id="search")
+						label(for="search") Оборудование
+						button(type="submit")
+				.search-result-items
+					a(href="#").product
+						.product-img(style="background-image: url(images/pech.jpg)")
+						.product-name
+							| Дровяная печь Harvia Legend 150
+					a(href="#").product
+						.product-img(style="background-image: url(images/pech_1.jpg)")
+						.product-name
+							| Дровяная печь Harvia Legend 240
+					a(href="#").product
+						.product-img(style="background-image: url(images/pech_2.jpg)")
+						.product-name
+							| Дровяная печь Harvia Legend 240 DUO
+					a(href="#").product
+						.product-img(style="background-image: url(images/pech_2.jpg)")
+						.product-name
+							| Дровяная печь Harvia Legend 240 DUO
+					a(href="#").product
+						.product-img(style="background-image: url(images/pech.jpg)")
+						.product-name
+							| Дровяная печь Harvia Legend 150
+					a(href="#").product
+						.product-img(style="background-image: url(images/pech_1.jpg)")
+						.product-name
+							| Дровяная печь Harvia Legend 240
+					a(href="#").product
+						.product-img(style="background-image: url(images/pech_2.jpg)")
+						.product-name
+							| Дровяная печь Harvia Legend 240 DUO
+					a(href="#").product
+						.product-img(style="background-image: url(images/pech_2.jpg)")
+						.product-name
+							| Дровяная печь Harvia Legend 240 DUO
+					a(href="#").product
+						.product-img(style="background-image: url(images/pech.jpg)")
+						.product-name
+							| Дровяная печь Harvia Legend 150
+					a(href="#").product.mobile-hidden
+						.product-img(style="background-image: url(images/pech_1.jpg)")
+						.product-name
+							| Дровяная печь Harvia Legend 240
+					a(href="#").product.mobile-hidden
+						.product-img(style="background-image: url(images/pech_2.jpg)")
+						.product-name
+							| Дровяная печь Harvia Legend 240 DUO
+					a(href="#").product.mobile-hidden
+						.product-img(style="background-image: url(images/pech_2.jpg)")
+						.product-name
+							| Дровяная печь Harvia Legend 240 DUO
+				#pagination
+					<ul class="pagination">
+						<li>
+							<a href="">Предыдущая</a>
+						</li>
+						<li>
+							<a href="">1</a>
+						</li>
+						<li>
+							<a href="">2</a>
+						</li>
+						<li class="active">
+							<a href="">3</a>
+						</li>
+						<li class="dots">
+							<a href="">...</a>
+						</li>
+						<li>
+							<a href="">10</a>
+						</li>
+						<li>
+							<a href="">Следующая</a>
+						</li>
+					</ul>
+		section.post
+			.container
+				.post-title
+					h3 Потребителю
+				.post-subtitle
+					p всё необходимое для создания комфортного, современного и безопасного места в вашей сауне и бане
+				.post-items
+					a(href="#" data-aos="fade-right" data-aos-duration="1500").post-item.aos-init.aos-animate
+						.post-item-img(style="background-image: url(images/post_1.jpg)")
+							.post-item-blick
+						.post-item-text
+							span Современные «Каменные печи»
+					a(href="#" data-aos="zoom-in" data-aos-duration="1500").post-item.aos-init.aos-animate
+						.post-item-img(style="background-image: url(images/post_2.jpg)")
+							.post-item-blick
+						.post-item-text
+							span Детали интерьера. Пример оформления
+					a(href="#" data-aos="fade-left" data-aos-duration="1500").post-item.aos-init.aos-animate
+						.post-item-img(style="background-image: url(images/post_3.jpg)")
+							.post-item-blick
+						.post-item-text
+							span Особая гордость
+				.post-btn-wrap
+					.post-btn
+						a(href="#")
+							| Все статьи
+		.search-modal
+			.search-modal-wrapper
+				.search-modal-close
+					a(href="#").close
+				.search-modal-text
+					h1
+						| Что будем искать?
+				form(action="#" method="GET")
+					input(type='search' name='search' id="search" placeholder='Введите ключевое слово' autocomplete='off')
+					button(type='submit')
+						span Искать
+		include pages/footer

@@ -1,0 +1,131 @@
+extends pug/base
+
+append vars
+	//- ...
+
+block content
+	.page-content
+		include pages/header
+		section.about.aos-init.aos-animate(data-aos="fade-up" data-aos-duration="1000")
+			#scene1
+				.container
+					.about-wrapper
+						.about-image(style="background-image: url(images/about.jpg);")
+							p
+								| О бренде
+							span.line
+						.about-title
+							h3 Harvia
+						.about-subtitle
+							p
+								| 68 лет опыта в производстве оборудования и акссесуаров для саун и бань
+						.about-text
+							p
+								| Компания Harvia является ведущим мировым производителем оборудования для саун и спа-салонов. Основанный в 1950 году пилотом Тапани Харвиа (Tapani Harvia), финский производитель каменок и печей для саун перерос во всемирно известный бренд, технологически передовые продукты которого экспортируются в более чем 80 стран.
+							p
+								| Наряду с каменками и печами Harvia предлагает сауны, инфракрасные и паровые комнаты, спа-модули, цифровые блоки управления и другие аксессуары, подходящие для различных саун и спа-салонов. Ассортимент компании Harvia также включает в себя внутренние решения от панелей и обшивки до динамиков и освещения.
+							h3
+								| Миссия:
+							p
+								| Миссия состоит в том, чтобы обогатить жизнь людей, предоставляя уникальные сауны и спа-услуги для создания идеальной гармонии тела и разума. Компания Harvia делает возможным достижение расслабления и естественного ощущения комфорта, которыми можно насладиться в любой сауне и спа-салоне.
+						.about-btn-wrap
+							.about-btn
+								a(href="#")
+									| подробнее О Harvia
+		section.products
+			#scene2
+				.container
+					.products-wrapper
+						.products-image(style="background-image: url(images/catalog.jpg);")
+							p
+								| Каталог
+							span.line
+						.products-title
+							h3 Каталог продукции
+						.products-subtitle
+							p
+								| всё необходимое для создания комфортного, современного и безопасного места в вашей сауне и бане
+						.products-items
+							a(href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-once).products-item.aos-init.aos-animate
+								.products-item-img(style="background-image: url(images/oborud.png)")
+								.products-item-text
+									| Оборудование
+									span.products-item-line
+							a(href="#" data-aos="fade-up" data-aos-duration="1500").products-item.aos-init.aos-animate
+								.products-item-img(style="background-image: url(images/derevo.png)")
+								.products-item-text
+									| Готовые решения
+									span.products-item-line
+							a(href="#" data-aos="fade-up" data-aos-duration="1500").products-item.aos-init.aos-animate
+								.products-item-img(style="background-image: url(images/aksesuar.png)")
+								.products-item-text
+									| Аксессуары
+									span.products-item-line
+							a(href="#" data-aos="fade-up" data-aos-duration="1500").products-item.aos-init.aos-animate
+								.products-item-img(style="background-image: url(images/kamni.png)")
+								.products-item-text
+									| Камни
+									span.products-item-line
+							a(href="#" data-aos="fade-up" data-aos-duration="1500").products-item.aos-init.aos-animate
+								.products-item-img(style="background-image: url(images/dveri.png)")
+								.products-item-text
+									| Двери
+									span.products-item-line
+							a(href="#" data-aos="fade-up" data-aos-duration="1500").products-item.aos-init.aos-animate
+								.products-item-img(style="background-image: url(images/osveweniye.png)")
+								.products-item-text
+									| Освещение
+									span.products-item-line
+							a(href="#" data-aos="fade-up" data-aos-duration="1500").products-item.aos-init.aos-animate
+								.products-item-img(style="background-image: url(images/interyer.png)")
+								.products-item-text
+									| Элементы интерьера
+									span.products-item-line
+							a(href="#" data-aos="fade-up" data-aos-duration="1500").products-item.aos-init.aos-animate
+								.products-item-img(style="background-image: url(images/material.png)")
+								.products-item-text
+									| Материалы
+									span.products-item-line
+							a(href="#" data-aos="fade-up" data-aos-duration="1500").products-item.aos-init.aos-animate.tab-hidden
+								.products-item-img(style="background-image: url(images/chasti.png)")
+								.products-item-text
+									| Запасные части
+									span.products-item-line
+		section.post
+			.container
+				.post-title
+					h3 Потребителю
+				.post-subtitle
+					p всё необходимое для создания комфортного, современного и безопасного места в вашей сауне и бане
+				.post-items
+					a(href="#" data-aos="fade-up" data-aos-duration="1000").post-item.aos-init.aos-animate
+						.post-item-img(style="background-image: url(images/post_1.jpg)")
+							.post-item-blick
+						.post-item-text
+							span Современные «Каменные печи»
+					a(href="#" data-aos="fade-up" data-aos-duration="1000").post-item.aos-init.aos-animate
+						.post-item-img(style="background-image: url(images/post_2.jpg)")
+							.post-item-blick
+						.post-item-text
+							span Детали интерьера. Пример оформления
+					a(href="#" data-aos="fade-up" data-aos-duration="1000").post-item.aos-init.aos-animate
+						.post-item-img(style="background-image: url(images/post_3.jpg)")
+							.post-item-blick
+						.post-item-text
+							span Особая гордость
+				.post-btn-wrap
+					.post-btn
+						a(href="#")
+							| Все статьи
+		.search-modal
+			.search-modal-wrapper
+				.search-modal-close
+					a(href="#").close
+				.search-modal-text
+					h1
+						| Что будем искать?
+				form(action="#" method="GET")
+					input(type='search' name='search' id="search" placeholder='Введите ключевое слово' autocomplete='off')
+					button(type='submit')
+						span Искать
+	include pages/footer

@@ -1,0 +1,30 @@
+.inner-page {
+	header .header .header-menu {
+		overflow: hidden;
+		padding-bottom: 30px;
+	}
+	header .scroll-header .header .header-menu {
+		overflow: visible;
+	}
+	header .header-menu-list ul .logo img {
+		height: 40px;
+	}
+	header .header-menu-list ul .logo {
+		margin-right: 121px;
+	}
+	header .header-contact-top-pic {
+		margin-top: 27px;
+	}
+	header .header-contact-top__contact {
+		left: -3px;
+	}
+	header .header-contact-top__contact p {
+		line-height: 26px;
+	}
+	header .header-menu .header-bg {
+		height: 566px;
+	}
+	header .header-contact-icon {
+		display: none;
+	}
+}

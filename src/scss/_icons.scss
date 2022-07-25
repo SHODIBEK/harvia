@@ -1,0 +1,29 @@
+.fb {
+    display: inline-block;
+    @include facebook($color-white);
+}
+.instagram {
+	display: inline-block;
+	@include instagram($color-white);
+}
+.search {
+	display: inline-block;
+	@include search($color-white);
+}
+.home {
+	display: inline-block;
+	@include home($color-white);
+}
+.ffb {
+	display: inline-block;
+	@include ffb($color-white);
+}
+.finsta {
+	display: inline-block;
+	@include finsta($color-white);
+}
+.pdf {
+	display: inline-block;
+	background-position: 0 center;
+	@include pdf($color-white);
+}

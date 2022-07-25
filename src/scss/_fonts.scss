@@ -1,0 +1,48 @@
+// stylelint-disable no-empty-source
+
+@font-face {
+	font-family: "PFDinTextCompPro-Medium";
+	src: url("../fonts/PFDinTextCompPro-Medium.woff") format("woff");
+	font-weight: 500;
+}
+@font-face {
+	font-family: "PFDinTextCompPro-Medium";
+	src: url("../fonts/PFDinTextCompPro-Medium.woff2") format("woff2");
+	font-weight: 500;
+}
+@font-face {
+	font-family: "PFDinTextCompPro-Light";
+	src: url("../fonts/PFDinTextCompPro-Light.ttf") format("ttf"),
+		 url("../fonts/PFDinTextCompPro-Light.woff") format("woff"),
+		 url("../fonts/PFDinTextCompPro-Light.woff2") format("woff2"),
+}
+@font-face {
+	font-family: "PFBeauSansPro-Regular";
+	src: url("../fonts/PFBeauSansPro-Regular.ttf") format("ttf"),
+	     url("../fonts/PFBeauSansPro-Regular.woff") format("woff"),
+	     url("../fonts/PFBeauSansPro-Regular.woff2") format("woff2");
+}
+@font-face {
+	font-family: "PFBeauSansPro-Bbook";
+	src: url("../fonts/PFBeauSansPro-Bbook.ttf") format("ttf"),
+		 url("../fonts/PFBeauSansPro-Bbook.woff") format("woff"),
+		 url("../fonts/PFBeauSansPro-Bbook.woff2") format("woff2"),
+}
+@font-face {
+	font-family: "PFBeauSansPro-BbookItalic";
+	src: url("../fonts/PFBeauSansPro-BbookItalic.ttf") format("ttf"),
+		 url("../fonts/PFBeauSansPro-BbookItalic.woff") format("woff"),
+		 url("../fonts/PFBeauSansPro-BbookItalic.woff2") format("woff2"),
+}
+@font-face {
+	font-family: "PFBeauSansPro-SemiBold";
+	src: url("../fonts/PFBeauSansPro-SemiBold.ttf") format("ttf"),
+	url("../fonts/PFBeauSansPro-SemiBold.woff") format("woff"),
+	url("../fonts/PFBeauSansPro-SemiBold.woff2") format("woff2"),
+}
+@font-face {
+	font-family: "PFDinTextCompPro-Italic";
+	src: url("../fonts/PFDinTextCompPro-Italic.ttf") format("ttf"),
+	url("../fonts/PFDinTextCompPro-Italic.woff") format("woff"),
+	url("../fonts/PPFDinTextCompPro-Italic.woff2") format("woff2"),
+}

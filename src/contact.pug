@@ -1,0 +1,131 @@
+extends pug/base
+
+append vars
+	- body.classList = ['inner-page'];
+
+block content
+	// Добавьте класс inner-page в body во внутренных страницах и удалите комент //
+	.page-content
+		include pages/header
+		.navigation
+			.container
+				.navigation-title
+					h1
+						| Контакты
+				<ul class="crumbs">
+					<li>
+						<a href="/">Главная</a>
+					</li>
+					<li>
+						<a href="">Контакты</a>
+					</li>
+				</ul>
+		.contact
+			.contact-map(style="background-image: url(images/map.jpg)")
+			.container
+				.contact-wrap
+					ul.contact-items
+						li.contact-item
+							h3 Телефоны:
+							a(href="tel:+998712522455") +998 (71) 252-24-55
+							span Единый телефонный номер
+							a(href="tel:+998712525287") +998 (71) 252-52-87
+							span Факс
+						li.contact-item.mark
+							h3 Адрес:
+							p 100029 Ташкент, Мирабадский район, ул. Чимкентская 1/25
+						li.contact-item
+							h3 Электронная почта:
+							a(href="mailto:info@harvia.uz") info@harvia.uz
+					.contact-form
+						.contact-form__title
+							h3 Если у Вас есть вопросы, вы можете обратиться к нам
+							p Мы изучим ваш вопрос и, при необходимости, свяжемся с вами
+						form(action="#" method="POST")
+							.contact-form__items
+								.form-group
+									input(type="text" name="name" id="name")
+									label(for="name") Представьтесь пожалуйста
+								.form-group
+									input(type="email" name="email" id="email")
+									label(for="email") Ваш адрес электронный почты
+								.form-group.textarea
+									textarea(name="textarea" id="textarea")
+									label(for="textarea") Ваше сообщение...
+								<div class="visualCaptcha" id="simple-captcha">
+									<div class="visualCaptcha-possibilities">
+										<div class="img">
+											<a href="javascript:void(0);" role='shirt' class='active'>
+												<img src="images/icons/shirt.svg" alt="" data-src='images/icons/shirtActive.svg'>
+											</a>
+										</div>
+										<div class="img">
+											<a href="javascript:void(0);" role='headphone'>
+												<img src="images/icons/headphone.svg" alt="" data-src='images/icons/headphoneActive.svg'>
+											</a>
+										</div>
+										<div class="img">
+											<a href="javascript:void(0);" role='auto'>
+												<img src="images/icons/auto.svg" alt="" data-src='images/icons/autoActive.svg'>
+											</a>
+										</div>
+										<div class="img">
+											<a href="javascript:void(0);" role='buggy'>
+												<img src="images/icons/buggy.svg" alt="" data-src='images/icons/buggyActive.svg'>
+											</a>
+										</div>
+										<div class="img">
+											<a href="javascript:void(0);" role='coffee'>
+												<img src="images/icons/coffee.svg" alt="" data-src='images/icons/coffeeActive.svg'>
+											</a>
+										</div>
+										<div class="img">
+											<a href="javascript:void(0);" role='airplain'>
+												<img src="images/icons/airplain.svg" alt="" data-src='images/icons/airplainActive.svg'>
+											</a>
+										</div>
+									</div>
+									<div class="visualCaptcha-explanation">Выберите&nbsp;<span class="active">"автомобиль"</span>, чтобы подтвердить, что&nbsp;Вы не&nbsp;робот</div>
+								</div>
+								.submit
+									.danger Все поля обязательны для заполнения
+									.submit-button
+										button(type="submit") Отправить
+		section.post
+			.container
+				.post-title
+					h3 Потребителю
+				.post-subtitle
+					p всё необходимое для создания комфортного, современного и безопасного места в вашей сауне и бане
+				.post-items
+					a(href="#" data-aos="fade-right" data-aos-duration="1500").post-item.aos-init.aos-animate
+						.post-item-img(style="background-image: url(images/post_1.jpg)")
+							.post-item-blick
+						.post-item-text
+							span Современные «Каменные печи»
+					a(href="#" data-aos="zoom-in" data-aos-duration="1500").post-item.aos-init.aos-animate
+						.post-item-img(style="background-image: url(images/post_2.jpg)")
+							.post-item-blick
+						.post-item-text
+							span Детали интерьера. Пример оформления
+					a(href="#" data-aos="fade-left" data-aos-duration="1500").post-item.aos-init.aos-animate
+						.post-item-img(style="background-image: url(images/post_3.jpg)")
+							.post-item-blick
+						.post-item-text
+							span Особая гордость
+				.post-btn-wrap
+					.post-btn
+						a(href="#")
+							| Все статьи
+		.search-modal
+			.search-modal-wrapper
+				.search-modal-close
+					a(href="#").close
+				.search-modal-text
+					h1
+						| Что будем искать?
+				form(action="#" method="GET")
+					input(type='search' name='search' id="search" placeholder='Введите ключевое слово' autocomplete='off')
+					button(type='submit')
+						span Искать
+	include pages/footer

@@ -1,0 +1,31 @@
+section.catalog {
+	padding-top: 59px;
+	padding-bottom: 75px;
+	.products-items {
+		padding-top: 0;
+		padding-bottom: 38px;
+	}
+}
+@media (max-width: 960px) {
+	section.catalog {
+		padding-top: 53px;
+		.products-items {
+			margin-left: 0;
+		}
+		.products-item {
+			width: 374px;
+			&-img {
+				width: 33%;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	section.catalog {
+		padding-top: 58px;
+	}
+	section.catalog .products-item-img {
+		width: 40%;
+	}
+}

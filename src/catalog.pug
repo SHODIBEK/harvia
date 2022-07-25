@@ -1,0 +1,113 @@
+extends pug/base
+
+append vars
+	- body.classList = ['inner-page'];
+
+block content
+	// Добавьте класс inner-page в body во внутренных страницах и удалите комент //
+	.page-content
+		include pages/header
+		.navigation
+			.container
+				.navigation-title
+					h1
+						| Каталог продукции
+				<ul class="crumbs">
+					<li>
+						<a href="/">Главная</a>
+					</li>
+					<li>
+						<a href="">Каталог продукции</a>
+					</li>
+				</ul>
+		section.catalog
+			.container
+				.products-items
+					a(href="#" data-aos="fade-right" data-aos-duration="1500").products-item.aos-init.aos-animate
+						.products-item-img(style="background-image: url(images/oborud.png)")
+						.products-item-text
+							| Оборудование
+							span.products-item-line
+					a(href="#" data-aos="fade-up" data-aos-duration="1500").products-item.aos-init.aos-animate
+						.products-item-img(style="background-image: url(images/derevo.png)")
+						.products-item-text
+							| Готовые решения
+							span.products-item-line
+					a(href="#" data-aos="fade-left" data-aos-duration="1500").products-item.aos-init.aos-animate
+						.products-item-img(style="background-image: url(images/aksesuar.png)")
+						.products-item-text
+							| Аксессуары
+							span.products-item-line
+					a(href="#" data-aos="fade-right" data-aos-duration="1500").products-item.aos-init.aos-animate
+						.products-item-img(style="background-image: url(images/kamni.png)")
+						.products-item-text
+							| Камни
+							span.products-item-line
+					a(href="#" data-aos="zoom-in" data-aos-duration="1500").products-item.aos-init.aos-animate
+						.products-item-img(style="background-image: url(images/dveri.png)")
+						.products-item-text
+							| Двери
+							span.products-item-line
+					a(href="#" data-aos="fade-left" data-aos-duration="1500").products-item.aos-init.aos-animate
+						.products-item-img(style="background-image: url(images/osveweniye.png)")
+						.products-item-text
+							| Освещение
+							span.products-item-line
+					a(href="#" data-aos="fade-right" data-aos-duration="1500").products-item.aos-init.aos-animate
+						.products-item-img(style="background-image: url(images/interyer.png)")
+						.products-item-text
+							| Элементы интерьера
+							span.products-item-line
+					a(href="#" data-aos="fade-up" data-aos-duration="1500").products-item.aos-init.aos-animate
+						.products-item-img(style="background-image: url(images/material.png)")
+						.products-item-text
+							| Материалы
+							span.products-item-line
+					a(href="#" data-aos="fade-left" data-aos-duration="1500").products-item.aos-init.aos-animate.tab-hidden
+						.products-item-img(style="background-image: url(images/chasti.png)")
+						.products-item-text
+							| Запасные части
+							span.products-item-line
+				.default-page
+					h4
+						| SEO блок
+					p
+						| Эта страница является самой первой и главной точкой посетителя сайта, и, поэтому важно заполнить ее наиболее качественной и интересной информацией, ведь именно прочитав ее, посетитель решит – оставаться на сайте или искать необходимую информацию в другом месте. Наполняя этот блок информацией, необходимо отталкиваться от потенциальных покупателей, их желаний и потребностей. Расскажите вкратце об истории и деятельности Вашей компании, укажите ваши плюсы и отличия от конкурентов.
+		section.post
+			.container
+				.post-title
+					h3 Потребителю
+				.post-subtitle
+					p всё необходимое для создания комфортного, современного и безопасного места в вашей сауне и бане
+				.post-items
+					a(href="#" data-aos="fade-right" data-aos-duration="1500").post-item.aos-init.aos-animate
+						.post-item-img(style="background-image: url(images/post_1.jpg)")
+							.post-item-blick
+						.post-item-text
+							span Современные «Каменные печи»
+					a(href="#" data-aos="zoom-in" data-aos-duration="1500").post-item.aos-init.aos-animate
+						.post-item-img(style="background-image: url(images/post_2.jpg)")
+							.post-item-blick
+						.post-item-text
+							span Детали интерьера. Пример оформления
+					a(href="#" data-aos="fade-left" data-aos-duration="1500").post-item.aos-init.aos-animate
+						.post-item-img(style="background-image: url(images/post_3.jpg)")
+							.post-item-blick
+						.post-item-text
+							span Особая гордость
+				.post-btn-wrap
+					.post-btn
+						a(href="#")
+							| Все статьи
+		.search-modal
+			.search-modal-wrapper
+				.search-modal-close
+					a(href="#").close
+				.search-modal-text
+					h1
+						| Что будем искать?
+				form(action="#" method="GET")
+					input(type='search' name='search' id="search" placeholder='Введите ключевое слово' autocomplete='off')
+					button(type='submit')
+						span Искать
+	include pages/footer

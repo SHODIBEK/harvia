@@ -1,0 +1,76 @@
+.navigation {
+	width: 100%;
+	position: relative;
+	height: auto;
+	background-image: url("../images/setka.jpg");
+	background-repeat: repeat;
+	background-position: center center;
+	&-title {
+		padding-top: 42px;
+		h1 {
+			font-family: $PFDinTextCompPro-Medium;
+			font-weight: normal;
+			font-size: 40px;
+			line-height: 43px;
+			color: $color-red;
+			margin: 0;
+		}
+	}
+	.crumbs {
+		position: relative;
+		top: 9px;
+		width: 100%;
+		border-radius: 3px;
+		background-color: #fff;
+		padding: 0 10px;
+		margin-top: 21px;
+		transform: skew(-10deg);
+		box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.1);
+		li {
+			display: inline-block;
+			word-break: break-all;
+			background-repeat: no-repeat;
+			transform: skew(10deg);
+			&:not(:last-child):after {
+				content: '';
+				display: inline-block;
+				width: 3px;
+				height: 6px;
+				margin: 0 5px;
+				vertical-align: middle;
+				background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzIiBoZWlnaHQ9IjYiIHZpZXdCb3g9IjAgMCAzIDYiPgogIDxwYXRoIHN0eWxlPSIgZmlsbDogIzg1ODA4MDtmaWxsLXJ1bGU6IGV2ZW5vZGQ7IiBkPSJNNTQzLjYxMyw0NTBhMC41NTYsMC41NTYsMCwwLDEtLjQyMi0wLjIsMC44NjYsMC44NjYsMCwwLDEtLjAyMi0xLjA1NWwxLjM3LTEuNzU1LTEuMzY5LTEuNzQzYTAuODY2LDAuODY2LDAsMCwxLC4wMi0xLjA1NSwwLjUzNywwLjUzNywwLDAsMSwuODY1LjAyM2wxLjc3MiwyLjI1N2EwLjg2OSwwLjg2OSwwLDAsMSwwLDEuMDNsLTEuNzcyLDIuMjcxQTAuNTY2LDAuNTY2LDAsMCwxLDU0My42MTMsNDUwWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTU0MyAtNDQ0KSIvPgo8L3N2Zz4K');
+			}
+			&:last-child {
+				pointer-events: none;
+			}
+			a {
+				display: inline-block;
+				transform: skew(0deg);
+				font-size: 11px;
+				line-height: 20px;
+				color: #858080;
+				text-decoration: none;
+				transition: all .3s ease-in-out;
+				&:hover {
+					color: $color-red;
+					transition: all .3s ease-in-out;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 960px) {
+	.navigation {
+		&-title {
+			padding-top: 40px;
+			h1 {
+				font-size: 30px;
+				line-height: 34px;
+			}
+		}
+		.crumbs {
+			margin-top: 18px;
+		}
+	}
+}

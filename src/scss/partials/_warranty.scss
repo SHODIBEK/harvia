@@ -1,0 +1,100 @@
+.warranty,.news-card {
+	padding-top: 73px;
+	padding-bottom: 97px;
+	img {
+		width: 470px;
+		border-radius: 7px;
+		margin-bottom: 10px;
+		background-color: rgb(206, 206, 206);
+		box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.25);
+	}
+}
+.back-btn {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	transform: skew(-10deg);
+	height: 36px;
+	margin-top: 23px;
+	border-radius: 7px;
+	border: 1px solid  rgb(232, 232, 232);
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0px 12px 20px 0px rgba(0, 0, 0, 0.15);
+	&:after,&:before {
+		position: absolute;
+		top: 50%;
+		content: '';
+		width: 20px;
+		height: 20px;
+		background-color: $color-red;
+		border-radius: 50%;
+	}
+	&:before {
+		left: -20px;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+	&:after {
+		right: -20px;
+		-webkit-transform: translate(50%, -50%);
+		transform: translate(50%, -50%);
+	}
+	&:hover {
+		a {
+			color: #fff;
+		}
+		&:before {
+			-webkit-animation: criss-cross-left 0.8s both;
+			animation: criss-cross-left 0.8s both;
+			-webkit-animation-direction: alternate;
+			animation-direction: alternate;
+		}
+		&:after {
+			-webkit-animation: criss-cross-right 0.8s both;
+			animation: criss-cross-right 0.8s both;
+			-webkit-animation-direction: alternate;
+			animation-direction: alternate;
+		}
+	}
+	a {
+		position: relative;
+		display: inline-block;
+		transform: skew(10deg);
+		font-family: $PFBeauSansPro-BbookItalic;
+		font-size: 12px;
+		line-height: 36px;
+		padding: 0 15px;
+		color: $color-red;
+		z-index: 1;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+}
+@media (max-width: 960px) {
+	.warranty, .news-card {
+		padding-top: 67px;
+		img {
+			width: 437px;
+
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.warranty,.news-card {
+		padding-bottom: 102px;
+		img {
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 25px;
+		}
+	}
+	.back-btn-wrap {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.back-btn {
+		margin-top: 25px;
+	}
+}
